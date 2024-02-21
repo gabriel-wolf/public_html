@@ -1,0 +1,79 @@
+body {
+    background-image: url('../imgs/nature.webp');
+    background-size: cover; /* Adjust to 'contain' if you want the whole image to be visible */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  }
+  
+  .panel {
+    background: white;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    border: 1px solid #ccc;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* width: 100%; */
+    max-height: 80vh; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+
+  h1,h2,h3,h4,p,li,a {
+    font-family: "Segoe UI",Arial,sans-serif;
+  }
+
+
+  h1 {
+    font-weight: 500;
+
+    text-align: center;
+
+    font-size: 48px;
+  }
+
+  h2 {
+    font-weight: 400;
+
+    /* text-align: center; */
+
+    font-size: 37px;
+  }
+
+  p {
+
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  .source {
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+
+
+  .key {
+    text-align: center;
+    list-style-type: none;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 70px;
+    color: white; 
+    text-shadow: -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000;
+  }
+
+  a {
+    font-weight: 600;
+  }

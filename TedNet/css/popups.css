@@ -1,0 +1,74 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+@keyframes intermittentShake {
+    0%, 100% { transform: translateX(0); } /* Start and end with no movement */
+    20%, 80% { transform: translateX(-5px); } /* Shake to the left */
+    40%, 60% { transform: translateX(5px); } /* Shake to the right */
+}
+
+.notif-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    /* animation: shake 2s infinite; */
+    animation: intermittentShake 4s infinite; /* Apply the intermittent shake animation */
+
+}
+
+/* Style for the notification content */
+.notif-content {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+/* Style for the image */
+.notif-image {
+    max-width: 60px; /* Set a maximum width for the image */
+    margin-right: 15px; /* Add spacing between image and text */
+}
+
+.notif-text {
+    color: white;
+}
+
+.notif-right-container {
+}
+
+.notif-buttons {
+    display: flex;
+    justify-content: space-between; /* Space the buttons evenly */
+    width: 100%; /* Full width within the container */
+}
+
+/* Style for the red button */
+.red-button {
+    padding: 5px 10px;
+    background-color: #e74c3c; /* Red color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+/* Style for the green button */
+.green-button {
+    padding: 5px 10px;
+    background-color: #27ae60; /* Green color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}

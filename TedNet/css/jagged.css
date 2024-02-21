@@ -1,0 +1,18 @@
+:root {
+    --random-jaggedness: calc(10px + var(--randomness) * 10px);
+}
+
+
+
+/* Apply a jagged border to an element with the class "jagged-border" */
+.jagged-border {
+    clip-path: polygon(
+        var(--random-jaggedness) 0%,
+        100% var(--random-jaggedness),
+        90% 100%,
+        0% calc(100% - var(--random-jaggedness))
+    );
+    border: 2px solid #333; /* Add a border to the element */
+    padding: 20px; /* Add some padding to the element */
+    background-color: #f0f0f0; /* Background color for better visibility */
+}

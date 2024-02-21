@@ -1,0 +1,12 @@
+/* light-theme.css */
+body {
+  color: #222;
+  background: #fff;
+}
+.lighta a {
+  color: #0033cc;
+}
+
+.switch-dl {
+  color: black;
+}

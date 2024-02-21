@@ -1,0 +1,68 @@
+html {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body {
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+  .wheat {
+    color: wheat;
+    font-size: xxx-large;
+    font-style: italic;
+  }
+
+  h2 {
+    /* color: blue; */
+    font-size: xxx-large;
+    font-style: italic;
+  }

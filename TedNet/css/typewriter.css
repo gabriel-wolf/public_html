@@ -1,0 +1,55 @@
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  .w3-green {
+    color: #fff!important;
+    background-color: #4CAF50!important;
+  }
+
+ 
+/* Style for the buttons */
+button.green {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4adb34; /* Nice blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 10px; /* Rounded borders */
+    cursor: pointer;
+    font-family: "Arial", sans-serif; /* Use a custom font if desired */
+    display: inline-block; /* Make the buttons inline-block elements */
+    margin: 0 10px; /* Add spacing between buttons */
+    text-transform: uppercase;
+}
+
+/* Style for button hover effect */
+button.green:hover {
+    background-color: #29b930; /* Darker blue color on hover */
+}
+
+.completed {
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    color: green;
+}

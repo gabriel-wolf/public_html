@@ -1,0 +1,15 @@
+/* dark-theme.css */
+body {
+    color: #eee;
+    /* background: #121212; */
+    background: #000000;
+  }
+  
+  .darka body a {
+    color: #809fff;
+  }
+
+  
+.switch-dl {
+  color: white;
+}

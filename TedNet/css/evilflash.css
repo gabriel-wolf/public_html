@@ -1,0 +1,12 @@
+.fade_image {
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.ted_contain {
+    position: relative;
+  }
+
+  

@@ -1,0 +1,55 @@
+
+.button-container {
+    text-align: center; /* Center-align the buttons within the container */
+}
+
+/* Style for the buttons */
+button.blue {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db; /* Nice blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 10px; /* Rounded borders */
+    cursor: pointer;
+    font-family: "Arial", sans-serif; /* Use a custom font if desired */
+    display: inline-block; /* Make the buttons inline-block elements */
+    margin: 0 10px; /* Add spacing between buttons */
+    text-transform: uppercase;
+}
+
+/* Style for button hover effect */
+button.blue:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+}
+
+
+.back-to-home {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #db3434;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Style for button hover effect */
+.back-to-home:hover {
+    background-color: #b92929;
+}
+
+
+.exit {
+    background-color: #db3434;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Style for button hover effect */
+.exit {
+    background-color: #b92929;
+}

@@ -1,0 +1,16 @@
+.flashing-text {
+    font-size: 26px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    animation: flash 0.25s infinite alternate; /* Apply the animation */
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1; /* Start with full opacity */
+    }
+    100% {
+        opacity: 0; /* End with zero opacity (hidden) */
+    }
+}

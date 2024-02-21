@@ -1,0 +1,564 @@
+<!-- http://973-eht-namuh-973.com/ -->
+<!-- https://www.sch1z0.net/net.html -->
+<!-- https://www.angelfire.com/trek/caver/ -->
+<!-- https://snoozing.com/ni-corruption -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TED</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/popups.css">
+    <link rel="stylesheet" href="css/godwords.css">
+    <link rel="stylesheet" href="css/evilflash.css">
+    <link rel="stylesheet" href="css/flash.css">
+    <link rel="stylesheet" href="css/glitch.css">
+    <link rel="stylesheet" href="css/jagged.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/centerpopup.css">
+    <link rel="stylesheet" href="css/questions.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/flashing-text.css">
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="css/typewriter.css">
+
+
+</head>
+<body>
+    <div class="notif-container" id="notification" wait="5000" fade="10000">
+        <div class="notif-content">
+            <img class="notif-image" src="imgs/cnts/nancy.png">
+            <div class="notif-right-container">
+                <p class="notif-text">Nancy wants to talk.</p>
+                <div class="notif-buttons">
+                    <button class="green-button">Accept</button>
+                    <button class="red-button">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="centerpopup" class="centerpopup">
+        <div class="center-popup-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <img class="cia-image" src="imgs/cia.png" style="width: inherit;">
+            <h1 class="redtext">RESTRICTED</h1>
+            <p>You do not have the required clearance to access this content.</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay1">
+      <!-- Large image -->
+      <img id="largeImage" src="imgs/cnts/nemoy.jpg" alt="Large Image">
+    </div>  
+
+    <div class="overlay" id="overlay2">
+      <!-- Large image -->
+      <img id="largeImage" src="imgs/cnts/mary.png" alt="Large Image">
+    </div>  
+
+    <div class="overlay" id="overlay3">
+      <!-- Large image -->
+      <img id="largeImage" src="imgs/cnts/Bon.png" alt="Large Image">
+    </div>  
+
+    <button dnp="home" class="back-to-home">Enough</button>
+    <button onclick="window.location.href = 'help.html';" class="questionbutton">?</button>
+
+    <div id="questionpage" class="questionpage">
+        <div class="question-content">
+            <span class="close-button" onclick="closequestion()">&times;</span>
+            <h1 class="redtext">question</h1>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+
+
+    <div id="story" class="max800">
+        <div id="home">
+            <h1 class="glitch">Welcome to the page of TED</h1>
+            <div class="center">
+                <section class="ted_contain">
+                    <img id="ted_photo" class="center ted_photo default_image" src="imgs/cnts/ted.png">
+                    <img id="ted_photo" class="center ted_photo fade_image" src="imgs/cnts/tedsad.png">
+                </section>
+                <p class="center caption">This is Ted.</p>
+                <!-- <p class="largertext">Please respect Teds wishes.</p> -->
+                <br>
+
+            </div>
+            <div class="button-container">
+                <button class="blue" dnp="words"><i class="fas fa-solid fa-cross"></i></button>
+                <button class="blue" onclick="move()" dnp="page3">Forget</button>
+                <button class="blue" dnp="contacts">People</button>
+                <button class="blue" dnp="buy">Buy</button>
+                <!-- <button class="blue" dnp="?????">Remember</button> -->
+                <button class="blue" onclick="openPopup()">Remember</button>
+                <button class="blue" dnp="music"><i class="fas fa-solid fa-music"></i></button>
+
+
+            </div>
+
+            <br>
+          
+            <!-- <div class="center-button-container">
+                <a href="https://www.nasa.gov" class="center exit">I do not wish to continue as Ted.</a>
+            </div> -->
+        </div>
+        
+        <div id="page2" style="display: none;">
+            <p>You went left and found a treasure chest!</p>
+            <div class="button-container">
+                <button dnp="home" class="image-button">
+                    <img src="imgs/lettertriangle.jpg" alt="Button Image">
+                </button>
+            </div>
+        </div>
+        <div id="page3" style="display: none;">
+
+          <div class="typewriter">
+            <h1>Clearing Memory...<h1>
+          </div>
+
+          <p>
+            This process will free up space in your mind!
+          </p>
+          <div id="myBar" class="w3-green" style="height:24px;width:0"></div>
+          <br>
+          <p style="visibility: hidden;" class="completed" id="completed">PROCESS COMPLETE</p>
+
+            
+          <script>
+          function move() {
+            var elem = document.getElementById("myBar");  
+            var textElem = document.getElementById("completed"); 
+            var width = 1;
+            var id = setInterval(frame, 100);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+                textElem.style.visibility = 'visible';
+              } else {
+                width++; 
+                elem.style.width = width + '%'; 
+              }
+            }
+          }
+
+          </script>
+
+
+            <!-- <button class="blue" dnp="home">Go Back to Life</button> -->
+        </div>
+        <div id="contacts" style="display: none;">
+            <h1>People</h1>
+            
+            <!-- nancy is dead -->
+            <!-- nancy is calling you -->
+            <!-- rob is unhappy with you and doesn't want to talk -->
+            <!-- pay 15 bucks to see what maria thinks of you -->
+            <!-- gain marias trust for 45.99 -->
+
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+            <div class="container mt-3 mb-4">
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4">
+                      <table class="table manage-candidates-top mb-0">
+                        <thead>
+                          <tr>
+                            <th>People</th>
+                            <th class="text-center">Status</th>
+                            <th class="action text-right" style="padding-left: 40px;">Desire</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="imgs/cnts/nemoy.jpg" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0 contactname">Nemoy Kelly</h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    <ul class="list-unstyled paddingleftzero">
+                                      <li class="max-content comment" style="width: -webkit-fill-available;">How many eggs did you want from the grocery store again?</li>
+                                      <li class="max-content price">Unlock Nemoy's final thoughts for $17.99</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <!-- <a class="candidate-list-favourite order-2 text-danger" href="#"><i class="fas fa-heart"></i></a> -->
+                              <span class="candidate-list-time order-1 con_center">Deceased</span>
+                            </td>
+                            <td>
+                              <ul class="list-unstyled mb-0 d-flex justify-content-end max-content textaligncenter">
+                                <li><button onclick="showLarge1()" class="butt bg-blue"><a href="#" class="text-primary whitetext" data-toggle="tooltip" title="" data-original-title="view"><i class="far fa-eye"></i> SEE</a></button></li>
+                                <li><button class="butt bg-green"><a href="#" class="text-info whitetext" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i> BELIEVE</a></button></li>
+                                <li><button onclick="move()" dnp="page3" class="butt bg-red"><a href="#" class="text-danger whitetext" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i> FORGET</a></button></li>
+                              </ul>
+                            </td>
+                          </tr>
+
+
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="imgs/cnts/mary.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0 contactname">Mary Bradley</h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    <ul class="list-unstyled paddingleftzero">
+                                      <li class="max-content comment" style="width: -webkit-fill-available;">Ronnie said you weren't at work yesterday.</li>
+                                      <li class="max-content price">Regain Mary's trust for $45.99</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <!-- <a class="candidate-list-favourite order-2 text-danger" href="#"><i class="fas fa-heart"></i></a> -->
+                              <span class="candidate-list-time order-1 con_center">Mistrust</span>
+                            </td>
+                            <td>
+                              <ul class="list-unstyled mb-0 d-flex justify-content-end max-content textaligncenter">
+                                <li onclick="showLarge2()"><button class="butt bg-blue"><a href="#" class="text-primary whitetext" data-toggle="tooltip" title="" data-original-title="view"><i class="far fa-eye"></i> SEE</a></button></li>
+                                <li><button class="butt bg-green"><a href="#" class="text-info whitetext" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i> BELIEVE</a></button></li>
+                                <li><button onclick="move()" dnp="page3" class="butt bg-red"><a href="#" class="text-danger whitetext" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i> FORGET</a></button></li>
+                              </ul>
+                            </td>
+                          </tr>
+
+
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="imgs/cnts/Bon.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0 contactname">Rafael Briggs</h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    <ul class="list-unstyled paddingleftzero">
+                                      <li class="max-content comment" style="width: -webkit-fill-available;">You prick.</li>
+                                      <li class="max-content price">Raphael does not wish to talk</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <!-- <a class="candidate-list-favourite order-2 text-danger" href="#"><i class="fas fa-heart"></i></a> -->
+                              <span class="candidate-list-time order-1 con_center">Blocked</span>
+                            </td>
+                            <td>
+                              <ul class="list-unstyled mb-0 d-flex justify-content-end max-content textaligncenter">
+                                <li onclick="showLarge3()"><button class="butt bg-blue"><a href="#" class="text-primary whitetext" data-toggle="tooltip" title="" data-original-title="view"><i class="far fa-eye"></i> SEE</a></button></li>
+                                <li><button class="butt bg-green"><a href="#" class="text-info whitetext" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i> BELIEVE</a></button></li>
+                                <li><button onclick="move()" dnp="page3" class="butt bg-red"><a href="#" class="text-danger whitetext" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i> FORGET</a></button></li>
+                              </ul>
+                            </td>
+                          </tr>
+
+
+
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            
+            <button class="blue" dnp="home">Return Home</button>
+        </div>
+
+
+        <div id="words">
+          <div class="centered-image">
+            <img src="imgs/templar.png" style="width:25%;">
+          </div>
+            <h1>Receive Words</h1>
+            <p class="center" id="displayedWord">Press a key to recieve a GOD WORD.</p>
+            <div id="flashingText" class="flashing-text" style="display: none;">
+              You have been enlightened!
+          </div>
+            <p style="text-align: center;">The Knights Templar thank you for your allegiance.</p>
+        </div>
+
+
+        <div id="buy">
+            <h1>Store</h1>
+
+            <p style="text-align: center;">Purchase from the store.</p>
+
+            <div class="storefront">
+              <div class="product">
+                  <img src="imgs/prods/crickets.jpg" alt="Product 1">
+                  <h2>Crickets</h2>
+                  <p class="item-price">$8.95</p>
+                  <p class="item-count">per 34g</p>
+              </div>
+              <div class="product">
+                  <img src="imgs/prods/locusts.jpg" alt="Product 2">
+                  <h2>Locusts</h2>  
+                  <p class="item-price">$4.95</p>
+                  <p class="item-count">per 20x</p>
+              </div>
+              <div class="product">
+                  <img src="imgs/prods/mealworms.jpg" alt="Product 3">
+                  <h2>Mealworms</h2>
+                  <p class="item-price">$4.99</p>
+                  <p class="item-count">per 8g</p>
+              </div>
+              <div class="product">
+                <img src="imgs/prods/ants.jpg" alt="Product 3">
+                <h2>Ants</h2>
+                <p class="item-price">$6.95</p>
+                <p class="item-count">per 1g</p>
+              </div>
+              <div class="product">
+                <img src="imgs/prods/scorpion.avif" alt="Product 3">
+                <h2>Scorpion</h2>
+                <p class="item-price">$6.50</p>
+                <p class="item-count">per each</p>
+              </div>
+              <div class="product">
+                <img src="imgs/prods/tarantula.jpg" alt="Product 3">
+                <h2>Tarantulas</h2>
+                <p class="item-price">$9.80</p>
+                <p class="item-count">per each</p>
+              </div>
+          </div>
+
+        </div>
+
+        <div id="music">
+          <h1>Hear</h1>
+          <p class="center" id="">Beautiful sounds reverberate.</p>
+          <br>
+
+          <div class="sound-wave" style="margin-top: 25px;
+          margin-right: 25px;
+          margin-bottom: 25px;
+          margin-left: 25px;
+          display: none;">
+            <div class="bar" style="animation-duration: 0.534443s;"></div>
+            <div class="bar" style="animation-duration: 0.642s;"></div>
+            <div class="bar" style="animation-duration: 0.355238s;"></div>
+            <div class="bar" style="animation-duration: 0.509273s;"></div>
+            <div class="bar" style="animation-duration: 0.572826s;"></div>
+            <div class="bar" style="animation-duration: 0.494026s;"></div>
+            <div class="bar" style="animation-duration: 0.352895s;"></div>
+            <div class="bar" style="animation-duration: 0.451422s;"></div>
+            <div class="bar" style="animation-duration: 0.328009s;"></div>
+            <div class="bar" style="animation-duration: 0.585509s;"></div>
+            <div class="bar" style="animation-duration: 0.485371s;"></div>
+            <div class="bar" style="animation-duration: 0.664391s;"></div>
+            <div class="bar" style="animation-duration: 0.644991s;"></div>
+            <div class="bar" style="animation-duration: 0.689263s;"></div>
+            <div class="bar" style="animation-duration: 0.486484s;"></div>
+            <div class="bar" style="animation-duration: 0.521132s;"></div>
+            <div class="bar" style="animation-duration: 0.282664s;"></div>
+            <div class="bar" style="animation-duration: 0.247146s;"></div>
+            <div class="bar" style="animation-duration: 0.300871s;"></div>
+            <div class="bar" style="animation-duration: 0.582286s;"></div>
+            <div class="bar" style="animation-duration: 0.66613s;"></div>
+            <div class="bar" style="animation-duration: 0.265924s;"></div>
+            <div class="bar" style="animation-duration: 0.25674s;"></div>
+            <div class="bar" style="animation-duration: 0.664729s;"></div>
+            <div class="bar" style="animation-duration: 0.551777s;"></div>
+            <div class="bar" style="animation-duration: 0.614478s;"></div>
+            <div class="bar" style="animation-duration: 0.546524s;"></div>
+            <div class="bar" style="animation-duration: 0.287466s;"></div>
+            <div class="bar" style="animation-duration: 0.432027s;"></div>
+            <div class="bar" style="animation-duration: 0.54184s;"></div>
+            <div class="bar" style="animation-duration: 0.40263s;"></div>
+            <div class="bar" style="animation-duration: 0.401922s;"></div>
+            <div class="bar" style="animation-duration: 0.577295s;"></div>
+            <div class="bar" style="animation-duration: 0.329359s;"></div>
+            <div class="bar" style="animation-duration: 0.61827s;"></div>
+            <div class="bar" style="animation-duration: 0.618829s;"></div>
+            <div class="bar" style="animation-duration: 0.282872s;"></div>
+            <div class="bar" style="animation-duration: 0.528843s;"></div>
+            <div class="bar" style="animation-duration: 0.253016s;"></div>
+            <div class="bar" style="animation-duration: 0.369465s;"></div>
+            <div class="bar" style="animation-duration: 0.397546s;"></div>
+            <div class="bar" style="animation-duration: 0.521487s;"></div>
+            <div class="bar" style="animation-duration: 0.262516s;"></div>
+            <div class="bar" style="animation-duration: 0.601053s;"></div>
+            <div class="bar" style="animation-duration: 0.523915s;"></div>
+            <div class="bar" style="animation-duration: 0.302176s;"></div>
+            <div class="bar" style="animation-duration: 0.688316s;"></div>
+            <div class="bar" style="animation-duration: 0.394924s;"></div>
+            <div class="bar" style="animation-duration: 0.313808s;"></div>
+            <div class="bar" style="animation-duration: 0.274092s;"></div>
+            <div class="bar" style="animation-duration: 0.391077s;"></div>
+            <div class="bar" style="animation-duration: 0.389782s;"></div>
+            <div class="bar" style="animation-duration: 0.598379s;"></div>
+            <div class="bar" style="animation-duration: 0.57301s;"></div>
+            <div class="bar" style="animation-duration: 0.38821s;"></div>
+            <div class="bar" style="animation-duration: 0.218507s;"></div>
+            <div class="bar" style="animation-duration: 0.23869s;"></div>
+            <div class="bar" style="animation-duration: 0.341082s;"></div>
+            <div class="bar" style="animation-duration: 0.688155s;"></div>
+            <div class="bar" style="animation-duration: 0.36474s;"></div>
+            <div class="bar" style="animation-duration: 0.406668s;"></div>
+            <div class="bar" style="animation-duration: 0.416834s;"></div>
+            <div class="bar" style="animation-duration: 0.669077s;"></div>
+            <div class="bar" style="animation-duration: 0.479092s;"></div>
+            <div class="bar" style="animation-duration: 0.520754s;"></div>
+            <div class="bar" style="animation-duration: 0.334261s;"></div>
+            <div class="bar" style="animation-duration: 0.668607s;"></div>
+            <div class="bar" style="animation-duration: 0.325879s;"></div>
+            <div class="bar" style="animation-duration: 0.502856s;"></div>
+            <div class="bar" style="animation-duration: 0.470205s;"></div>
+            <div class="bar" style="animation-duration: 0.642959s;"></div>
+            <div class="bar" style="animation-duration: 0.428409s;"></div>
+            <div class="bar" style="animation-duration: 0.501324s;"></div>
+            <div class="bar" style="animation-duration: 0.566711s;"></div>
+            <div class="bar" style="animation-duration: 0.65955s;"></div>
+            <div class="bar" style="animation-duration: 0.43499s;"></div>
+            <div class="bar" style="animation-duration: 0.560792s;"></div>
+            <div class="bar" style="animation-duration: 0.591043s;"></div>
+            <div class="bar" style="animation-duration: 0.581072s;"></div>
+            <div class="bar" style="animation-duration: 0.205336s;"></div>
+            <div class="bar" style="animation-duration: 0.201822s;"></div>
+            <div class="bar" style="animation-duration: 0.32355s;"></div>
+            <div class="bar" style="animation-duration: 0.583784s;"></div>
+            <div class="bar" style="animation-duration: 0.262951s;"></div>
+            <div class="bar" style="animation-duration: 0.381341s;"></div>
+            <div class="bar" style="animation-duration: 0.461371s;"></div>
+            <div class="bar" style="animation-duration: 0.571924s;"></div>
+            <div class="bar" style="animation-duration: 0.450055s;"></div>
+            <div class="bar" style="animation-duration: 0.436132s;"></div>
+            <div class="bar" style="animation-duration: 0.659457s;"></div>
+            <div class="bar" style="animation-duration: 0.614754s;"></div>
+            <div class="bar" style="animation-duration: 0.581133s;"></div>
+            <div class="bar" style="animation-duration: 0.254248s;"></div>
+            <div class="bar" style="animation-duration: 0.308501s;"></div>
+            <div class="bar" style="animation-duration: 0.218594s;"></div>
+            <div class="bar" style="animation-duration: 0.459549s;"></div>
+            <div class="bar" style="animation-duration: 0.612126s;"></div>
+            <div class="bar" style="animation-duration: 0.574s;"></div>
+            <div class="bar" style="animation-duration: 0.38026s;"></div>
+            <div class="bar" style="animation-duration: 0.550164s;"></div>
+            <div class="bar" style="animation-duration: 0.377561s;"></div>
+            <div class="bar" style="animation-duration: 0.348627s;"></div>
+            <div class="bar" style="animation-duration: 0.283487s;"></div>
+            <div class="bar" style="animation-duration: 0.523213s;"></div>
+            <div class="bar" style="animation-duration: 0.589074s;"></div>
+            <div class="bar" style="animation-duration: 0.680489s;"></div>
+            <div class="bar" style="animation-duration: 0.491604s;"></div>
+            <div class="bar" style="animation-duration: 0.588711s;"></div>
+            <div class="bar" style="animation-duration: 0.645731s;"></div>
+            <div class="bar" style="animation-duration: 0.481201s;"></div>
+            <div class="bar" style="animation-duration: 0.295856s;"></div>
+            <div class="bar" style="animation-duration: 0.643265s;"></div>
+            <div class="bar" style="animation-duration: 0.496086s;"></div>
+            <div class="bar" style="animation-duration: 0.220748s;"></div>
+            <div class="bar" style="animation-duration: 0.600916s;"></div>
+            <div class="bar" style="animation-duration: 0.36058s;"></div>
+            <div class="bar" style="animation-duration: 0.346504s;"></div>
+            <div class="bar" style="animation-duration: 0.564944s;"></div>
+            <div class="bar" style="animation-duration: 0.289653s;"></div>
+            <div class="bar" style="animation-duration: 0.273336s;"></div>
+            <div class="bar" style="animation-duration: 0.326798s;"></div>
+            <div class="bar" style="animation-duration: 0.656029s;"></div>
+            <div class="bar" style="animation-duration: 0.206712s;"></div>
+            <div class="bar" style="animation-duration: 0.562888s;"></div>
+            <div class="bar" style="animation-duration: 0.291116s;"></div>
+            <div class="bar" style="animation-duration: 0.237426s;"></div>
+            <div class="bar" style="animation-duration: 0.451346s;"></div>
+            <div class="bar" style="animation-duration: 0.678129s;"></div>
+            <div class="bar" style="animation-duration: 0.279539s;"></div>
+            <div class="bar" style="animation-duration: 0.384007s;"></div>
+            <div class="bar" style="animation-duration: 0.298917s;"></div>
+            <div class="bar" style="animation-duration: 0.354525s;"></div>
+            <div class="bar" style="animation-duration: 0.363988s;"></div>
+            <div class="bar" style="animation-duration: 0.448677s;"></div>
+            <div class="bar" style="animation-duration: 0.431175s;"></div>
+            <div class="bar" style="animation-duration: 0.566595s;"></div>
+            <div class="bar" style="animation-duration: 0.54207s;"></div>
+            <div class="bar" style="animation-duration: 0.273398s;"></div>
+            <div class="bar" style="animation-duration: 0.327559s;"></div>
+            <div class="bar" style="animation-duration: 0.629782s;"></div>
+            <div class="bar" style="animation-duration: 0.263728s;"></div>
+            <div class="bar" style="animation-duration: 0.382888s;"></div>
+            <div class="bar" style="animation-duration: 0.318947s;"></div>
+            <div class="bar" style="animation-duration: 0.263862s;"></div>
+            <div class="bar" style="animation-duration: 0.401227s;"></div>
+            <div class="bar" style="animation-duration: 0.326991s;"></div>
+            <div class="bar" style="animation-duration: 0.478385s;"></div>
+            <div class="bar" style="animation-duration: 0.673839s;"></div>
+            <div class="bar" style="animation-duration: 0.229645s;"></div>
+            <div class="bar" style="animation-duration: 0.358258s;"></div>
+            <div class="bar" style="animation-duration: 0.335058s;"></div>
+            <div class="bar" style="animation-duration: 0.504208s;"></div>
+            <div class="bar" style="animation-duration: 0.437066s;"></div>
+            <div class="bar" style="animation-duration: 0.48925s;"></div>
+            <div class="bar" style="animation-duration: 0.4895s;"></div>
+            <div class="bar" style="animation-duration: 0.460869s;"></div>
+            <div class="bar" style="animation-duration: 0.511229s;"></div>
+            <div class="bar" style="animation-duration: 0.292996s;"></div>
+            <div class="bar" style="animation-duration: 0.624036s;"></div>
+            <div class="bar" style="animation-duration: 0.403553s;"></div>
+          </div>
+
+          <audio id="myAudio"  preload="auto">
+            <source src="mp3/risen.mp3" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="audioControls">
+          <button style="display: none;" class="thumbs-down-button" id="pauseButton"><i class="fas fa-thumbs-down"></i></button>
+          <button class="play-button" id="playButton"><i class="fas fa-play"></i></button>
+          <button style="display: none;" class="thumbs-up-button" id="good"><i class="fas fa-thumbs-up"></i></button>
+        </div>
+        
+          
+        
+
+      </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/evilflash.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/jagged.js"></script>
+    <script src="js/godwords.js"></script>
+    <script src="js/centerpopup.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/flashing-text.js"></script>
+
+
+
+
+
+</body>
+</html>

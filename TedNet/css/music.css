@@ -1,0 +1,103 @@
+.sound-wave {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bar {
+    animation-name: wave-lg;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background: #f32968; // Change the color for the bars
+    margin: 0 1.5px;
+    height: 10px;
+    width: 1px; // Change the number for the bar width
+
+    &:nth-child(-n + 7),
+    &:nth-last-child(-n + 7) {
+      animation-name: wave-md;
+    }
+
+    &:nth-child(-n + 3),
+    &:nth-last-child(-n + 3) {
+      animation-name: wave-sm;
+    }
+  }
+}
+
+@keyframes wave-sm {
+  0% {
+    opacity: 0.35;
+    height: 10px;
+  }
+  100% {
+    opacity: 1;
+    height: 25px;
+  }
+}
+
+@keyframes wave-md {
+  0% {
+    opacity: 0.35;
+    height: 15px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+@keyframes wave-lg {
+  0% {
+    opacity: 0.35;
+    height: 15px;
+  }
+  100% {
+    opacity: 1;
+    height: 70px;
+  }
+}
+
+
+.audioControls {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Play button */
+.play-button {
+  background-color: #008CBA; /* Blue background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding to make it bigger */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px;
+}
+
+/* Thumbs up button */
+.thumbs-up-button {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding to make it bigger */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px;
+
+}
+
+/* Thumbs down button */
+.thumbs-down-button {
+  background-color: #D32F2F; /* Red background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding to make it bigger */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px;
+
+}
