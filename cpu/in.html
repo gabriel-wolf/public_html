@@ -8,20 +8,16 @@
 <body>
 
 <div id="serverInfo">
-    <!-- Server CPU and memory information will be displayed here -->
 </div>
 
 <script>
 function updateServerInfo() {
-    // Fetch server information from the PHP script
     fetch('server_info.php')
         .then(response => response.json())
         .then(data => {
-            // Update the HTML with the received data
             document.getElementById('serverInfo').innerHTML =
                 `CPU: ${data.cpu.toFixed(2)}% MEMORY: ${data.memory} MB`;
 
-            // Schedule the next update after a certain interval (e.g., 5 seconds)
             setTimeout(updateServerInfo, 5000);
         })
         .catch(error => {
@@ -29,7 +25,6 @@ function updateServerInfo() {
         });
 }
 
-// Initial call to start the updates
 updateServerInfo();
 </script>
 

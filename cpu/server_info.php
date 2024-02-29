@@ -1,6 +1,7 @@
 <?php
 // Get CPU usage
 exec("grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}'", $cpuUsage);
+$simpleCpuUsage = exec("top -bn 1 | awk '/^%Cpu/{print $2}'");
 
 // Get total memory and free memory
 exec("free -b", $output);
@@ -17,7 +18,7 @@ if ($totalMemory > 0) {
 $memoryGB = number_format($usedMemory / (1024 * 1024 * 1024), 1);
 
 // Send JSON response
-$json = json_encode(['cpuUsage' => $cpuUsage[0], 'memoryUsage' => $memoryUsage, 'memoryGB' => $memoryGB], JSON_NUMERIC_CHECK);
+$json = json_encode(['simpleCpuUsage' => $simpleCpuUsage, 'cpuUsage' => $cpuUsage[0], 'memoryUsage' => $memoryUsage, 'memoryGB' => $memoryGB], JSON_NUMERIC_CHECK);
 
 if ($json === false) {
     echo 'Json encoding failed: ' . json_last_error_msg();

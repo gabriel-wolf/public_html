@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partridge Gets Lucky</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<video id="reversibleVideo" loop>
+    <source src="http://www.partridgegetslucky.com/vid/partridgeGetsLucky.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<script>
+    const video = document.getElementById('reversibleVideo');
+
+    // when video ends
+    video.addEventListener('ended', () => {
+        // get playback directon
+        if (video.playbackRate > 0) {
+            // if forward go backward
+            video.playbackRate = -1;
+        } else {
+            // if going backwards go forwards again
+            video.playbackRate = 1;
+        }
+
+        video.play();
+    });
+
+    video.play();
+</script>
+
+</body>
+</html>

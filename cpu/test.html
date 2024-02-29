@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Info</title>
-    <style>
-        /* Your CSS styles here */
-    </style>
 </head>
 <body>
 
 <div id="server-info">
-    <!-- Display server information here -->
 </div>
 
 <script>
@@ -19,10 +15,8 @@ function fetchServerInfo() {
     fetch('server_info.php')
         .then(response => response.json())
         .then(data => {
-            // Log the entire JSON data to the console
             console.log(data);
 
-            // Display specific information in your HTML
             document.getElementById('server-info').innerHTML = `
                 <p>CPU: ${data.cpu}%</p>
                 <p>Memory: ${data.memoryGB} GB (${data.memoryPercentage.toFixed(2)}%)</p>
@@ -33,10 +27,8 @@ function fetchServerInfo() {
         });
 }
 
-// Fetch server information on page load
 document.addEventListener('DOMContentLoaded', fetchServerInfo);
 
-// Fetch server information periodically (every 5 seconds in this example)
 setInterval(fetchServerInfo, 5000);
 </script>
 

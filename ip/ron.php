@@ -15,24 +15,22 @@ $clientIP = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED
             overflow: hidden;
             background: url('imgs/ron_red.jpeg') no-repeat center center fixed;
             background-size: cover;
-        height: 100vh;    
-	display: flex;
+            height: 100vh;    
+	        display: flex;
             align-items: center;
             justify-content: center;
-           background-size: 100% 100%;
-           
+            background-size: 100% 100%;
             text-align: center;
         }
 
         p {
             margin: 0;
-color: red;
+            color: red;
             font-size: 100px;
-font-family: monospace;
+            font-family: monospace;
             font-weight: bold;
             text-align: center;
-                text-shadow: -2px -2px yellow, 2px -2px yellow, -2px 2px yellow, 2px 2px yellow;
-
+            text-shadow: -2px -2px yellow, 2px -2px yellow, -2px 2px yellow, 2px 2px yellow;
             margin: 0;
         }
     </style>
