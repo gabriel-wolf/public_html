@@ -222,20 +222,78 @@
             margin-left: 10px;
             font-weight: bold;
             color: blue;
+            white-space: nowrap;
         }
 
-        .data {}
+        .data {
+            white-space: nowrap;
+        }
+
+        .progress-bar {
+            width: 50px; /* Initial width, you can adjust as needed */
+            height: 15px;
+            background-color: rgb(218, 218, 218); /* Background color of the bar */
+            overflow: hidden;
+            display: inline-block;
+            position: relative;
+            margin-left: 3px;
+            
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db; /* Color of the filled part */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .progress-empty {
+            height: 100%;
+            background-color: #dcdcdc; /* Color of the unfilled part */
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .percentage-text {
+            display: inline-block;
+            margin-left: 10px; /* Adjust as needed */
+        }
     </style>
 
     <div id="serverInfoBox">
-        <div id="server-info">
-            <p>Loading server information...</p>
+        <div class="server-info" id="server-info">
+            <p class="head">Users</p>
+            <p class="data" id="numUsers"></p>
+            <p class="head">CPU</p>
+            <p class="data" id="cpuUsage"></p>
+            <p class="head">Used Memory</p>
+            <p class="data" id="memoryGB"></p>
+            <p class="head">Memory</p>
+            <p class="data percentage-text" id="percentageText"></p>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="memoryPercentage"></div>
+                <div class="progress-empty"></div>
+            </div>
+
+            
         </div>
+    
     </div>
 
 
 
     <script>
+        function updateMemoryPercentageBar(percentage) {
+            const progressBar = document.getElementById('memoryPercentage');
+            const percentageText = document.getElementById('percentageText');
+
+            progressBar.style.width = `${percentage}%`;
+            percentageText.innerText = `${percentage.toFixed(1)}%`;
+        }
+
         function fetchServerInfo() {
             fetch('cpu/server_info.php')
                 .then(response => response.json())
@@ -245,13 +303,12 @@
 
                     // Display specific information in your HTML
                     if (data.cpuUsage !== undefined) {
-                        const cpuPercentage = (data.cpuUsage * 100).toFixed(1);
-                        document.getElementById('server-info').innerHTML = `
-                    <p class="head">CPU</p>
-                    <p class="data">${data.simpleCpuUsage}%<p>
-                    <p class="head">Memory</p>
-                    <p class="data">${data.memoryGB} GB</p>
-                `;
+                        document.getElementById('numUsers').innerText = data.numUsers;
+                        document.getElementById('cpuUsage').innerText = `${data.simpleCpuUsage}%`;
+                        document.getElementById('memoryGB').innerText = `${data.memoryGB} GB`;
+
+                        // Update the memory percentage bar
+                        updateMemoryPercentageBar(data.memoryPercentage);
                     } else {
                         console.error('Error: CPU information is undefined.');
                     }
