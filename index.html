@@ -240,9 +240,17 @@
             
         }
 
-        .progress-fill {
+        .progress-fill-blue {
             height: 100%;
             background-color: #3498db; /* Color of the filled part */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .progress-fill-green {
+            height: 100%;
+            background-color: #45db34; /* Color of the filled part */
             position: absolute;
             top: 0;
             left: 0;
@@ -268,14 +276,16 @@
             <p class="data" id="numUsers"></p>
             <p class="head">CPU</p>
             <p class="data" id="cpuUsage"></p>
+            <div class="progress-bar">
+                <div class="progress-fill-blue" id="cpuPercentage"></div>
+            </div>
             <p class="head">Used Memory</p>
             <p class="data" id="memoryGB"></p>
             <p class="head">Memory</p>
             <p class="data percentage-text" id="percentageText"></p>
 
             <div class="progress-bar">
-                <div class="progress-fill" id="memoryPercentage"></div>
-                <div class="progress-empty"></div>
+                <div class="progress-fill-green" id="memoryPercentage"></div>
             </div>
 
             
@@ -286,6 +296,13 @@
 
 
     <script>
+        function updateCPUPercentageBar(percentage) {
+            const progressBarcpu = document.getElementById('cpuPercentage');
+            progressBarcpu.style.width = `${percentage}%`;
+
+        }
+
+
         function updateMemoryPercentageBar(percentage) {
             const progressBar = document.getElementById('memoryPercentage');
             const percentageText = document.getElementById('percentageText');
@@ -309,6 +326,7 @@
 
                         // Update the memory percentage bar
                         updateMemoryPercentageBar(data.memoryPercentage);
+                        updateCPUPercentageBar(data.simpleCpuUsage);
                     } else {
                         console.error('Error: CPU information is undefined.');
                     }
