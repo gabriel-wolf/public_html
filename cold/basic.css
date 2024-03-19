@@ -1,3 +1,8 @@
+body {
+    font-family: sans-serif;
+
+}
+
 /* CSS styles for the layout */
 .span2 {
     grid-column: span 2;

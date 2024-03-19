@@ -13,7 +13,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Dizziness", "Headache", "Constipation"],
-        imageUrl: "https://www.trusthubble.com/cdn/shop/files/Benzonatate_TESSALONPERLES.png?v=1683817569&width=1200",
+        imageUrl: "https://cdn.honeybeehealth.com/product_units/tessalon-capsule-100mg-zqag0r3lubq5udb0l5s0k1pslq66",
         link: "https://example.com/tessalon-perles"
     },
     {
@@ -25,7 +25,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "Varies by product" }
         ],
         sideEffects: ["Nasal irritation", "Loss of smell (rare)"],
-        imageUrl: "https://bjs.scene7.com/is/image/bjs/311767?$bjs-Zoom$",
+        imageUrl: "https://www.vitalitymedical.com/media/catalog/product/cache/21f717a5a4491c4366455175eca0b3cb/z/i/zicam-cold-remedy-citrus-rapidmelts.png",
         link: "https://example.com/zicam"
     },
     {
@@ -39,7 +39,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Drowsiness", "Dry mouth", "Constipation"],
-        imageUrl: "https://i5.walmartimages.com/seo/Vicks-NyQuil-Cold-and-Flu-Relief-Liquid-Medicine-over-the-Counter-Medicine-Cherry-12-fl-oz_1b8d84d4-30eb-41af-9f68-4845b7f6d52e.a645610c4b55d16fcfbfbbf14970f823.jpeg",
+        imageUrl: "https://images.ctfassets.net/xuuihvmvy6c9/7H0mjZq2rINzXs4D7mmUyZ/7b82a6cc56c4f06fa6f8bb61c66573c6/840X840________10.png",
         link: "https://example.com/nyquil"
     },{
         name: "Tylenol",
@@ -50,7 +50,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Nausea", "Liver damage"],
-        imageUrl: "https://m.media-amazon.com/images/I/71udwjn9lrL.jpg",
+        imageUrl: "https://www.tylenol.com/sites/tylenol_us/files/styles/product_image/public/product-images/microsoftteams-image_1.png",
         link: "https://example.com/tylenol"
     },
     {
@@ -62,7 +62,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Stomach upset", "Ulcers"],
-        imageUrl: "https://m.media-amazon.com/images/I/71byBwaWpuL._AC_UF1000,1000_QL80_.jpg",
+        imageUrl: "https://s3.eu-west-3.amazonaws.com/perrigo.com/perrigo_com_assets/styles/thumbnail_medium/s3/product-images/PQ%20604K4resize.png?VersionId=VVVtEojWi8skBRO7S5f8kNkUQMIaXh1F&itok=r2XuiNbx",
         link: "https://example.com/ibuprofen"
     },
     {
@@ -74,7 +74,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Dizziness", "Drowsiness"],
-        imageUrl: "https://m.media-amazon.com/images/I/61+yromFD7L._AC_UF1000,1000_QL80_.jpg",
+        imageUrl: "https://images.gopuff.com/blob/gopuffcatalogstorageprod/catalog-images-container/resize/cf/version=1_2,format=auto,fit=scale-down,width=800,height=800/b7390f8f-879e-4953-b35e-6b1d1a7d0db0.png",
         link: "https://example.com/delsym"
     },
     {
@@ -86,7 +86,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Nasal dryness", "Rebound congestion (with prolonged use)"],
-        imageUrl: "https://m.media-amazon.com/images/I/71a9XtDFopL._AC_UF1000,1000_QL80_.jpg",
+        imageUrl: "https://www.afrin.com/sites/g/files/vrxlpx50106/files/styles/desktop_1000xauto/public/2023-01/afrin-products-original_1.png?itok=aEj0x8eb",
         link: "https://example.com/afrin"
     },
     {
@@ -100,7 +100,7 @@ const medications = [
             { name: "Inactive ingredients", dosage: "List available on product packaging" }
         ],
         sideEffects: ["Nausea", "Dizziness", "Insomnia"],
-        imageUrl: "https://m.media-amazon.com/images/I/81Yx636B-9L._AC_UF1000,1000_QL80_.jpg",
+        imageUrl: "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-theraflu/en_US/products/00300677917060_front.png?auto=format",
         link: "https://example.com/theraflu"
     }
     // Add more medications as needed

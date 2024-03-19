@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Roboto;
+font-size: 12px;
+}
+
+.top-bar {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+}
+
+.icons {
+  font-size: 0.9em;
+}
