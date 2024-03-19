@@ -1,0 +1,74 @@
+/* CSS styles for the layout */
+.span2 {
+    grid-column: span 2;
+}
+
+.goto3 {
+    grid-column: 3;
+}
+
+.grid-container-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.med-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Display title and image in a column */
+    align-items: center; /* Center items horizontally */
+    height: fit-content;
+}
+
+.med-box:hover {
+    background-color: lightblue;
+}
+
+.med-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; /* Limit the maximum height */
+}
+
+#selectedMedsDetails {
+    padding: 20px;
+ /*   border: 1px solid #ccc;  */
+    margin-bottom: 20px;
+}
+
+.med-title {
+font-size: 1.2em; /* Adjust the font size as needed */
+font-weight: bold; /* Make the font bold */
+}
+
+.selected-med-details {
+border: 5px solid #ccc;
+border-radius: 10px;
+padding: 20px;
+margin-left: 20px;
+}
+
+.selected {
+    background-color: #b8ffc8; /* Change to whatever color you prefer */
+}

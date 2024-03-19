@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medication Combiner</title>
+</head>
+<body>
+
+ <link rel="stylesheet" href="basic.css"> 
+
+
+<div class="grid-container-3">
+    <div id="medGrid" class="grid-container-3 span2">
+        <!-- Medication grid will be populated dynamically -->
+    </div>
+
+    <div class="selected-med-details goto3">
+        <div id="selectedMedsDetails">
+            <h2>Selected Medications Details</h2>
+            <h3>Treats</h3>
+            <div id="medicationsUses"></div>
+            <h3>Ingredients</h3>
+            <div id="medicationsIngredients"></div>
+            <h3>Side Effects</h3>
+            <div id="medicationsSideEffects"></div>
+            <h3>Warnings</h3>
+            <div id="sharedIngredientsWarning"></div>
+        </div>
+    </div>
+</div>
+
+<div class="medications">
+    <h2>Available Medications</h2>
+    <div class="grid-container-3" id="medicationsRow">
+        <!-- Medications row will be populated dynamically -->
+    </div>
+</div>
+
+
+<script src="basic.js"></script>
+
+</body>
+</html>
+
