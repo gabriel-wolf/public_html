@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git Update</title>
+</head>
+<body>
+    <button id="gitUpdateButton">Update Repository</button>
+    <script>
+        document.getElementById('gitUpdateButton').addEventListener('click', function() {
+            fetch('/update-repo', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to update repository');
+                    }
+                    alert('Repository updated successfully');
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert('Failed to update repository');
+                });
+        });
+    </script>
+</body>
+</html>
