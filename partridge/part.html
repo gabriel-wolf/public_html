@@ -27,6 +27,13 @@
 
 <script>
     const video = document.getElementById('reversibleVideo');
+    
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        video.muted = true;
+        video.play();
+    }
 
     video.addEventListener('ended', () => {
         if (video.playbackRate > 0) {

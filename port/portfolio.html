@@ -473,13 +473,20 @@ function checkEnter(event) {
     <span class="badge js">JS</span>
 
     <p>
-      One of my favorite websites is: <a class="regular-link" href="https://partridgegetslucky.com/">Partridge Gets Lucky</a>. 
+      One of my favorite websites is: <a class="regular-link" href="http://partridgegetslucky.com/">Partridge Gets Lucky</a>. 
       Its just a looping video of Alan Partridge dancing. 
-      I rectead it on my site. I included the code that makes it loop.
-    </p>
+      I rectead it on my site. I included the code that makes it loop. 
+      The video plays forward, then reverses automatically at the end, going back to the beginning in reverse. This loop repeats continuously.    </p>
     <h3 class="filename">part.html</h3>
     <pre class="pre-code"><code class="language-js">
 const video = document.getElementById('reversibleVideo');
+
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isSafari) {
+    video.muted = true;
+    video.play();
+}
 
 video.addEventListener('ended', () => {
     if (video.playbackRate > 0) {
