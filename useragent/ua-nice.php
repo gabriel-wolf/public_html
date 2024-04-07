@@ -28,7 +28,6 @@
 <?php
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
 
-// Function to get the browser from the User-Agent string
 function getBrowser($userAgent) {
     $browser = "Unknown";
     
@@ -39,7 +38,6 @@ function getBrowser($userAgent) {
     return $browser;
 }
 
-// Function to get the operating system from the User-Agent string
 function getOperatingSystem($userAgent) {
     $os = "Unknown";
 

@@ -42,29 +42,9 @@
         
 
         </div>
-        <!--
 
-    <div class="top-left">
-      <iframe style="border: none; color: white;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-popups" src="https://assist.zoho.com/login/embed-remote-support.jsp"></iframe>
-    </div>
-
-    <div class="bottom-right">
-      <h2><a href="https://help.hawken.edu/portal/en/home">help.hawken.edu</a></h2>
-
-    </div>
-
-
-
-
-    <div class="bottom-left">
-
-      <h2><a href="https://www.icmec.org/donate-now/">icmec.org/donate-now/</a></h2>
-
--->
-        <!-- dog div -->
         <div>
-            <!-- dog -->
-            <!-- display:none -->
+
             <svg style="display:none;" class="sausage-dog-animation" xmlns="http://www.w3.org/2000/svg"
                 viewBox="-50 0 1200 1080">
                 <ellipse class="shadow" ry="45" rx="350" cy="816" cx="498" opacity="1" fill="#B2CAE8" fill-opacity="1"
@@ -321,16 +301,13 @@
             fetch('cpu/server_info.php')
                 .then(response => response.json())
                 .then(data => {
-                    // Log the entire JSON data to the console
                     console.log(data);
 
-                    // Display specific information in your HTML
                     if (data.cpuUsage !== undefined) {
                         document.getElementById('numUsers').innerText = data.numUsers;
                         document.getElementById('cpuUsage').innerText = `${data.simpleCpuUsage}%`;
                         document.getElementById('memoryGB').innerText = `${data.memoryGB} GB`;
 
-                        // Update the memory percentage bar
                         updateMemoryPercentageBar(data.memoryPercentage);
                         updateCPUPercentageBar(data.simpleCpuUsage);
                     } else {
@@ -342,10 +319,8 @@
                 });
         }
 
-        // Fetch server information on page load
         document.addEventListener('DOMContentLoaded', fetchServerInfo);
 
-        // Fetch server information periodically (every 5 seconds in this example)
         setInterval(fetchServerInfo, 1000);
     </script>
 

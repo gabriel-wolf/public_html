@@ -1,8 +1,6 @@
-// JavaScript code to handle medication selection and display
 
-let selectedMeds = []; // Array to store selected medications
+let selectedMeds = []; 
 
-// Sample array of medications (replace with actual data)
 const medications = [
     {
         name: "Tessalon Perles",
@@ -103,33 +101,27 @@ const medications = [
         imageUrl: "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-theraflu/en_US/products/00300677917060_front.png?auto=format",
         link: "https://example.com/theraflu"
     }
-    // Add more medications as needed
 ];
 
 
-// Function to populate medications grid
 function populateMedGrid() {
     const medGrid = document.getElementById('medGrid');
-    medGrid.innerHTML = ''; // Clear the grid
+    medGrid.innerHTML = ''; 
     medications.forEach(med => {
         const box = document.createElement('div');
         box.classList.add('med-box');
         
-        // Create an image element for the medication
         const img = document.createElement('img');
-        img.src = med.imageUrl; // Set the image source
-        img.alt = med.name; // Set alt text for accessibility
+        img.src = med.imageUrl; 
+        img.alt = med.name; 
         
-        // Create a span element for the medication name
         const nameSpan = document.createElement('span');
         nameSpan.textContent = med.name;
         nameSpan.classList.add('med-title');
 
-        // Create a paragraph element for the uses
         const usesParagraph = document.createElement('p');
         usesParagraph.textContent = `Uses: ${med.uses.join(', ')}`;
 
-        // Create a div for the ingredients list
         const ingredientsDiv = document.createElement('div');
         ingredientsDiv.classList.add('med-details');
         const ingredientsHeading = document.createElement('h4');
@@ -143,62 +135,49 @@ function populateMedGrid() {
         ingredientsDiv.appendChild(ingredientsHeading);
         ingredientsDiv.appendChild(ingredientsList);
         
-        // Append the elements to the box
         box.appendChild(img);
         box.appendChild(nameSpan);
 
 
-        // Add click event listener to toggle medication selection
         box.addEventListener('click', () => toggleMed(med));
         
-        // Append the box to the medications grid
         medGrid.appendChild(box);
     });
 }
 
-// Function to populate medications row
 function populateMedicationsRow() {
     const medicationsRow = document.getElementById('medicationsRow');
     medications.forEach(med => {
         const box = document.createElement('div');
         box.classList.add('med-box');
         
-        // Create a span element for the medication name
         const nameSpan = document.createElement('span');
         nameSpan.textContent = med.name;
-        nameSpan.classList.add('med-title'); // Add class for the medication title
-        box.appendChild(nameSpan); // Append the title to the medication box
+        nameSpan.classList.add('med-title'); 
+        box.appendChild(nameSpan);
         
-        // Create an image element
         const img = document.createElement('img');
-        img.src = med.imageUrl; // Set the image source
-        img.alt = med.name; // Set alt text for accessibility
-        box.appendChild(img); // Append the image to the medication box
+        img.src = med.imageUrl; 
+        img.alt = med.name; 
+        box.appendChild(img);
         
-        // Add click event listener to toggle medication selection
         box.addEventListener('click', () => toggleMed(med));
         
-        // Append the box to the medications row
         medicationsRow.appendChild(box);
     });
 }
 
 
-// Function to add or remove selected medication from the grid
-// Function to add or remove selected medication from the grid
 function toggleMed(med) {
     const index = selectedMeds.findIndex(item => item.name === med.name);
     if (index !== -1) {
-        // Medication is already selected, remove it
         selectedMeds.splice(index, 1);
     } else {
-        // Medication is not selected, add it
         selectedMeds.push(med);
     }
     renderMedGrid();
     renderSelectedMedsDetails();
 
-    // Toggle class for the medication box in the medicationsRow grid
     const medicationsRow = document.getElementById('medicationsRow');
     const medicationBoxes = medicationsRow.querySelectorAll('.med-box');
     medicationBoxes.forEach(box => {
@@ -220,12 +199,11 @@ function renderSelectedMedsDetails() {
     medicationsSideEffects.innerHTML = '';
     sharedIngredientsWarning.innerHTML = '';
     
-    // Gather combined uses, ingredients, and side effects of selected medications
     let combinedUses = [];
     let combinedIngredients = [];
     let combinedSideEffects = [];
-    let sharedIngredients = {}; // Added to store shared ingredients
-    
+    let sharedIngredients = {}; 
+
     selectedMeds.forEach(med => {
         combinedUses = combinedUses.concat(med.uses);
         med.ingredients.forEach(ingredient => {
@@ -236,21 +214,16 @@ function renderSelectedMedsDetails() {
         combinedSideEffects = combinedSideEffects.concat(med.sideEffects);
     });
     
-    // Remove duplicate entries
     combinedUses = [...new Set(combinedUses)];
     combinedIngredients = [...new Set(combinedIngredients.map(ingredient => ingredient.name))];
     combinedSideEffects = [...new Set(combinedSideEffects)];
     
-    // Display combined uses
     medicationsUses.innerHTML = `${combinedUses.join(', ')}`;
     
-    // Display combined ingredients
     medicationsIngredients.innerHTML = `${combinedIngredients.join(', ')}`;
     
-    // Display combined side effects
     medicationsSideEffects.innerHTML = `${combinedSideEffects.join(', ')}`;
    
-    // Check for shared ingredients among selected medications
     combinedIngredients.forEach(ingredient => {
         if (ingredient !== "Inactive ingredients") {
             const medsWithIngredient = selectedMeds.filter(med => med.ingredients.some(item => item.name === ingredient));
@@ -260,7 +233,6 @@ function renderSelectedMedsDetails() {
         }
     });
     
-    // Display shared ingredients warning
     for (const ingredient in sharedIngredients) {
         sharedIngredientsWarning.innerHTML += `Be careful, multiple medicines have "${ingredient}"<br>`;
     }
@@ -268,24 +240,20 @@ function renderSelectedMedsDetails() {
 
 
 
-// Function to render medication grid
 function renderMedGrid() {
     const medGrid = document.getElementById('medGrid');
-    medGrid.innerHTML = ''; // Clear the grid
+    medGrid.innerHTML = ''; 
     selectedMeds.forEach(med => {
         const box = document.createElement('div');
         box.classList.add('med-box');
-        // Create a span element for the medication name
         const nameSpan = document.createElement('span');
         nameSpan.textContent = med.name;
-        nameSpan.classList.add('med-title'); // Add class for the medication title
+        nameSpan.classList.add('med-title'); 
 
         
-        // Create a paragraph element for medication uses
         const usesPara = document.createElement('p');
         usesPara.textContent = `Uses: ${med.uses.join(', ')}`;
         
-        // Create a div for displaying ingredients
         const ingredientsDiv = document.createElement('div');
         ingredientsDiv.innerHTML = '<strong>Ingredients:</strong>';
         med.ingredients.forEach(ingredient => {
@@ -294,19 +262,15 @@ function renderMedGrid() {
             ingredientsDiv.appendChild(ingredientPara);
         });
         
-        // Append all elements to the box
         box.appendChild(nameSpan);
         box.appendChild(usesPara);
         box.appendChild(ingredientsDiv);
         
-        // Add click event listener to toggle medication selection
         box.addEventListener('click', () => toggleMed(med));
         
-        // Append the box to the medications grid
         medGrid.appendChild(box);
     });
 }
 
 
-// Populate medications row on page load
 populateMedicationsRow();

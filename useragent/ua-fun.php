@@ -23,7 +23,6 @@ if (strpos($ua, 'Macintosh') !== false) {
     $os = 'Unknown OS';
 }
 
-// Set the message based on browser and OS
 if ($os === 'Linux') {
     $message = "Linux. You think you are so quirky don't you. You are just a nerd.";
 } elseif ($browser === 'Safari') {
@@ -34,7 +33,6 @@ if ($os === 'Linux') {
     $message = "You are using $browser on $os.";
 }
 
-// HTML structure with inline styles for centering
 ?>
 <!DOCTYPE html>
 <html lang="en">

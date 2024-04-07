@@ -1,7 +1,6 @@
 <?php
 $ua = $_SERVER['HTTP_USER_AGENT'];
 
-// Detect browser
 if (strpos($ua, 'Chrome') !== false) {
     $browser = 'Chrome';
 } elseif (strpos($ua, 'Safari') !== false) {
@@ -12,7 +11,6 @@ if (strpos($ua, 'Chrome') !== false) {
     $browser = 'Unknown Browser';
 }
 
-// Detect operating system
 if (strpos($ua, 'Macintosh') !== false) {
     $os = 'Mac';
 } elseif (strpos($ua, 'Windows') !== false) {
@@ -23,7 +21,6 @@ if (strpos($ua, 'Macintosh') !== false) {
     $os = 'Unknown OS';
 }
 
-// Set the message based on browser and OS
 if ($os === 'Linux') {
     $message = "Linux. You think you are so quirky don't you. You are just a nerd.";
     $flashText = 'NERD';
@@ -42,7 +39,6 @@ if ($os === 'Linux') {
 
 }
 
-// HTML structure with inline styles for centering
 ?>
 <!DOCTYPE html>
 <html lang="en">
