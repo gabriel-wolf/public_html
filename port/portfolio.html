@@ -171,6 +171,16 @@
 .php {
   background-color: purple;
 }
+
+img {
+margin-top: 5%;
+}
+
+.yellow-highlight {
+    color: black;
+    background-color: yellow;
+}
+
   
 </style>
 </head>
@@ -221,7 +231,7 @@
 
     <p>
       This was made to provide the ability to see the cpu usage and memory usage on the server without having to go into terminal and run a top command.
-      The initial versions just featured CPU Percent and Memory Percent. Through several iterations I was able to add Used Memory and Users.
+      <span class="yellow-highlight">The initial versions just featured CPU Percent and Memory Percent. Through several iterations I was able to add Used Memory and Users.</span>
       You can see some of the attempts and workings here: <a class="regular-link" href="../cpu/">CPU</a>.
       The script works by running top commands and then processing the result and sending it over json to the page to display nicely. It runs it every couple seconds to stay updated.
     </p>
@@ -310,8 +320,9 @@ if ($json === false) {
     echo $json;
 }
           </code></pre>
+          
+          <img src="https://lh3.googleusercontent.com/u/1/drive-viewer/AKGpihb8LKvDYbFYbjiy1sPtAt_IBPSIrf2FW0_oZQTngpBrg-3ANJBOsMaFygYbk1j1NAswULUbbM0qHOVXqrwpIB2nJmABQKhSMao=w3600-h2008-v0" alt="image">
 
-  
    
   </div>
 
@@ -325,7 +336,7 @@ if ($json === false) {
 
     <p>
       This is based off a script that Andre showed us in class. The script would take your IP and make a video with an image in the background in real time out of it.
-      I originally tried to do that but it required ffmpeg and without being able to install on the eecslab server, it just wasn't possible. 
+      <span class="yellow-highlight">I originally tried to do that but it required ffmpeg and without being able to install on the eecslab server, it just wasn't possible.</span>
       You can see some of my attempts at getting it working here: <a class="regular-link" href="../funny/">FFMPEG</a>
       In the end I decided to make it an image and sound instead of a movie. So when you open it up you see the big picutre of Professor Loui and your IP in the middle. 
       Then the Doom Music starts playing.
@@ -338,6 +349,8 @@ $clientIP = isset($_SERVER['HTTP_X_FORWARDED_FOR'])
   : $_SERVER['REMOTE_ADDR'];
       </code></pre> 
 
+
+      <img src="https://lh3.google.com/u/1/d/1Nb2CYWTvjRSC3n-STz09cb6PQ7sG24tU=w2490-h2008-iv1" alt="image">
 
     
   </div>
@@ -352,7 +365,7 @@ $clientIP = isset($_SERVER['HTTP_X_FORWARDED_FOR'])
     <p>
       This code was made to make fun of people who are using nerdy systems or nerdy browsers.
       For example: Linux, FireFox and similar. 
-      You can see some of the older versions and workings here: <a class="regular-link" href="../useragent/">UserAgent</a>.
+      <span class="yellow-highlight">You can see some of the older versions and workings here: <a class="regular-link" href="../useragent/">UserAgent</a>.</span>
       The code would collect the user-agent and use it to determine the OS and browser of the user. 
       And based on that info it would provide a response of text and a flashing large text.
       
@@ -400,6 +413,8 @@ if ($os === 'Linux') {
 }          
           </code></pre> 
     
+      
+          <img src="https://lh3.google.com/u/1/d/1xnr8dJ2RQth9koG7pMZQpQwgJ07BSbwy=w2490-h2008-iv1" alt="image">
 
 
 
@@ -414,6 +429,7 @@ if ($os === 'Linux') {
     <p>
       This code was made to verify that a password you have was not easy to crack. In reality, it's a joke. 
       The idea is that it requires you to do stranger and stranger things in your password. 
+      <span class="yellow-highlight">Over time I added crazier and crazier requirements.</span>
       For example: Include a name of a great lake in your password.
       You can see the rest of the code here: <a class="regular-link" href="../pswd/">Password</a>.
     </p>
@@ -464,6 +480,9 @@ function checkEnter(event) {
 }
 </code></pre>
 
+<img src="https://lh3.google.com/u/1/d/1HeAR8w9UQ13SLY_5G9it8kaNIhGxbcLp=w2490-h2008-iv1" alt="image">
+
+
   </div>
 
   <div class="feature">
@@ -476,6 +495,7 @@ function checkEnter(event) {
       One of my favorite websites is: <a class="regular-link" href="http://partridgegetslucky.com/">Partridge Gets Lucky</a>. 
       Its just a looping video of Alan Partridge dancing. 
       I rectead it on my site. I included the code that makes it loop. 
+      <span class="yellow-highlight">I initially had it autoplay all the time. But some browsers won't like that with sound. So I made it only autoplay on chrome and in safari it will turn off sound and then autoplay.</span>
       The video plays forward, then reverses automatically at the end, going back to the beginning in reverse. This loop repeats continuously.    </p>
     <h3 class="filename">part.html</h3>
     <pre class="pre-code"><code class="language-js">
@@ -501,7 +521,8 @@ video.addEventListener('ended', () => {
 video.play();
       </code></pre> 
     
-  
+      <img src="https://lh3.google.com/u/1/d/1IFL5k3SNzTL25lY75u5XAYBkmppml5ak=w2490-h2008-iv1" alt="image">
+
     
   </div>
 
@@ -514,6 +535,7 @@ video.play();
     <p>
       When I was sick I had to take a lot of different cold medicines and I kept on having to see which ones I could take together and which ones would overlap.
       So I created this site to help you pick your medicines. It allows you to select and deselect medicines and see what medicines interact and have the same ingredients and which ones treat which ailments. 
+      <span class="yellow-highlight">Over time I added more features like the select and deslect and also added new medicines which is very easy given you just add them to the array. The last thing I did was replace all the images with transparent background images which made it look really nice.</span>
       You can see the rest of the code here: <a class="regular-link" href="../cold/">Cold</a>.
     </p>
     
@@ -792,6 +814,9 @@ function renderMedGrid() {
 
 populateMedicationsRow();
       </code></pre> 
+
+      <img src="https://lh3.google.com/u/1/d/18z4jU-2yKFZigG9wIiOQD2Is1WCUOFfR=w2490-h2008-iv1" alt="image">
+
 
 
   </div>
